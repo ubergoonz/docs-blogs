@@ -5,7 +5,7 @@ site_description = "Documentation and blog by ubergoonz on technology, software 
 site_author = "ubergoonz"
 
 copyright = '<a href="about/copyright/">Copyright</a> &copy; 2025 - <span id="year"></span> <b>All Rights Reserved</b><br>'
-repo_url = "https://github.com/ubergoonz/docs-blog"
+repo_url = "https://github.com/ubergoonz/docs-blogs"
 repo_name = "ubergoonz/docs-blogs"
 # edit_uri = "edit/main/docs/"
 
