@@ -10,7 +10,7 @@ hide:
 
 # :material-home: Home
 
-Hello and welcome to **{{ config.site_name | e }}**
+Hello and welcome to **{{ config.site_name | e }}** accessible via the [{{ config.site_url }}]({{ config.site_url}})
 
 > {{ config.site_description | e }}
 
