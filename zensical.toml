@@ -1,0 +1,292 @@
+[project]
+site_url = "https://ubergoonz.github.io/docs-blogs/"
+site_name = "the curious mind 🧠 of ubergoonz"
+site_description = "Documentation and blog by ubergoonz on technology, software development, AI Augmented Development and many more. This website is intended for myself and any technologist who are keen to learn and share knowledge."
+site_author = "ubergoonz"
+
+copyright = '<a href="about/copyright/">Copyright</a> &copy; 2025 - <span id="year"></span> <b>All Rights Reserved</b><br>'
+repo_url = "https://github.com/ubergoonz/docs-blog"
+repo_name = "ubergoonz/docs-blogs"
+# edit_uri = "edit/main/docs/"
+
+
+nav = [
+  { "Home" = "index.md" },
+  { "Reference" = [
+    "references/index.md",
+    { "Get Started w/ Zensical" = "references/getting-started.md" },
+    { "Markdown in 5min" = "references/markdown.md" },
+  ] },
+  { "About" = [
+    { "Overview" = "about/index.md" },
+    { "ubergoonz" = [
+      { "Manual of me" = "about/manual-of-me.md" },
+    ]},
+    { "Site Guide" = [
+      { "Architecture" = "about/site-architecture.md" },
+      { "Site Navigation" = "about/site-navigation.md" },
+      { "Site Roadmap" = "about/site-roadmap.md" },
+      { "Page Navigation" = "about/page-navigation.md" },
+      { "Formatting & Style" = "about/page-style-formatting.md" },
+    ] },
+    { "Page Status" = [
+      { "Overview" = "about/page-status/overview.md" },
+      { "Deprecated" = "about/page-status/deprecated.md" },
+      { "Draft" = "about/page-status/draft.md" },
+      { "Hot" = "about/page-status/hot.md" },
+      { "New" = "about/page-status/new.md" },
+      { "Published" = "about/page-status/published.md" },
+    ] },
+    { "Legal" = [
+      { "Copyright" = "about/copyright.md" },
+      { "Disclaimers" = "about/disclaimers.md" },
+    ] },
+  ] },
+  { "Tech Docs" = [
+      "tech-docs/index.md",
+     { "AI Augmented Development" = [
+        "tech-docs/ai-aug-dev/index.md",
+        { "GitHub Copilot" = [
+          "tech-docs/ai-aug-dev/github-copilot/index.md",
+          { "Explanation" = "tech-docs/ai-aug-dev/github-copilot/explanation/index.md" },
+          { "How To" = "tech-docs/ai-aug-dev/github-copilot/how-to/index.md" },
+          { "Reference" = "tech-docs/ai-aug-dev/github-copilot/reference/index.md" },
+          { "Tutorial" = "tech-docs/ai-aug-dev/github-copilot/tutorial/index.md" },
+          ] },
+     ] }, 
+      { "DevTools" = [
+        "tech-docs/devtools/index.md",
+        { "️Ghostty" = [ 
+          "tech-docs/devtools/ghostty/index.md",
+          { "Explanation" = "tech-docs/devtools/ghostty/explanation/index.md" },
+          { "How To" = "tech-docs/devtools/ghostty/how-to/index.md" },
+          { "Reference" = "tech-docs/devtools/ghostty/reference/index.md" },
+          { "Tutorial" = "tech-docs/devtools/ghostty/tutorial/index.md" },
+        ]},
+        { "️Starship" = [ 
+          "tech-docs/devtools/starship/index.md",
+          { "Explanation" = "tech-docs/devtools/starship/explanation/index.md" },
+          { "How To" = "tech-docs/devtools/starship/how-to/index.md" },
+          { "Reference" = "tech-docs/devtools/starship/reference/index.md" },
+          { "Tutorial" = "tech-docs/devtools/starship/tutorial/index.md" },
+        ]},
+        { "️tmux" = [
+          "tech-docs/devtools/tmux/index.md",
+          { "Explanation" = "tech-docs/devtools/tmux/explanation/index.md" },
+          { "How To" = "tech-docs/devtools/tmux/how-to/index.md" },
+          { "Reference" = "tech-docs/devtools/tmux/reference/index.md" },
+          { "Tutorial" = "tech-docs/devtools/tmux/tutorial/index.md" },
+        ] },
+      ] },
+      { "OS" = [
+        "tech-docs/os/index.md",
+        { "macOS" = [
+          "tech-docs/os/macos/index.md",
+          { "Explanation" = "tech-docs/os/nix/explanation/index.md" },
+          { "How To" = "tech-docs/os/nix/how-to/index.md" },
+          { "Reference" = "tech-docs/os/nix/reference/index.md" },
+          { "Tutorial" = "tech-docs/os/nix/tutorial/index.md" },
+          ] },
+        { "Unix / Linux" = [
+          "tech-docs/os/nix/index.md",
+          { "Explanation" = "tech-docs/os/nix/explanation/index.md" },
+          { "How To" = "tech-docs/os/nix/how-to/index.md" },
+          { "Reference" = "tech-docs/os/nix/reference/index.md" },
+          { "Tutorial" = "tech-docs/os/nix/tutorial/index.md" },
+          ] },
+        { "Windows" = [
+          "tech-docs/os/win/index.md",
+          { "Explanation" = "tech-docs/os/win/explanation/index.md" },
+          { "How To" = "tech-docs/os/win/how-to/index.md" },
+          { "Reference" = "tech-docs/os/win/reference/index.md" },
+          { "Tutorial" = "tech-docs/os/win/tutorial/index.md" },
+          ] },
+        { "ZSH" = [
+          "tech-docs/os/zsh/index.md",
+          { "Explanation" = "tech-docs/os/zsh/explanation/index.md" },
+          { "How To" = "tech-docs/os/zsh/how-to/index.md" },
+          { "Reference" = "tech-docs/os/zsh/reference/index.md" },
+          { "Tutorial" = "tech-docs/os/zsh/tutorial/index.md" },
+          ] },
+      ] },
+      { "Platforms" = [
+        "tech-docs/platforms/index.md",
+        { "GitHub" = [
+          "tech-docs/platforms/github/index.md",
+          { "Explanation" = "tech-docs/platforms/github/explanation/index.md" },
+          { "How To" = "tech-docs/platforms/github/how-to/index.md" },
+          { "Reference" = "tech-docs/platforms/github/reference/index.md" },
+          { "Tutorial" = "tech-docs/platforms/github/tutorial/index.md" },
+          ] },
+        { "GitLab" = [
+          "tech-docs/platforms/gitlab/index.md",
+          { "Explanation" = "tech-docs/platforms/gitlab/explanation/index.md" },
+          { "How To" = "tech-docs/platforms/gitlab/how-to/index.md" },
+          { "Reference" = "tech-docs/platforms/gitlab/reference/index.md" },
+          { "Tutorial" = "tech-docs/platforms/gitlab/tutorial/index.md" },
+          ] },
+        { "Material MkDocs" = [
+          "tech-docs/platforms/material-mkdocs/index.md",
+          { "Explanation" = "tech-docs/platforms/material-mkdocs/explanation/index.md" },
+          { "How To" = "tech-docs/platforms/material-mkdocs/how-to/index.md" },
+          { "Reference" = "tech-docs/platforms/material-mkdocs/reference/index.md" },
+          { "Tutorial" = "tech-docs/platforms/material-mkdocs/tutorial/index.md" },
+          ] },
+      ] },
+  ] },
+  { "Blog" = [
+    "blog/index.md",
+    { "Tags" = "blog/tags.md" },
+  ] },
+]
+
+extra_css = ["stylesheets/matrix.css", "stylesheets/extra.css"]
+extra_javascript = ["javascripts/copyright.js", "javascripts/matrix.js"]
+exclude_docs = "/overrides/\n"
+
+[project.theme]
+# variant = "classic"
+custom_dir = "docs/overrides"
+font = false
+favicon = "assets/favicon.ico?v=terminal-ico-2"
+language = "en"
+features = [
+  "announce.dismiss",
+  # "content.action.edit",
+  # "content.action.view",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  "header.autohide",
+  # "navigation.expand",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.instant.progress",
+  "navigation.path",
+  # "navigation.prune",
+  "navigation.sections",
+  "navigation.tabs",
+  # "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  # "toc.follow",
+  # "toc.integrate",
+]
+
+logo = "assets/logo.png"
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to Matrix mode"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/ubergoonz"
+name = "ubergoonz on GitHub"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/gitlab"
+link = "https://gitlab.com/ubergoonz"
+name = "ubergoonz on GitLab"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/in/ubergoonz/"
+name = "ubergoonz on LinkedIn"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/x-twitter"
+link = "https://x.com/in/ubergoonz/"
+name = "ubergoonz on X (previously known as Twitter)"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.critic = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.snippets.base_path = "includes"
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
+
+[project.markdown_extensions."zensical.extensions.macros"]
+render_by_default = false
+module_name = ""
+on_undefined = "strict"
+on_error_fail = true
+
+[project.extra.consent]
+title = "🍪 Cookie consent"
+description = """
+  We use cookies to recognize your repeated visits and preferences, as well
+  as to measure the effectiveness of our documentation and whether users
+  find what they're searching for. With your consent, you're helping us to
+  make our documentation better.
+ """
+
+[project.extra.status]
+new = "Recently added"
+draft = "Draft - use with pinch of salt"
+deprecated = "Deprecated - use with a pinch of salt"
+hot = "Hot - popular" 
+published = "published from draft"
+
+[project.plugins.blog]
+blog_toc = true
+
+[project.plugins.tags]
+listings = true
+
+[project.theme.icon.tag]
+default = "lucide/hash"
+html = "fontawesome/brands/html5"
+js = "fontawesome/brands/js"
+css = "fontawesome/brands/css3"
+bohliao = "material/drama-masks"
+
+[project.extra.tags]
+HTML5 = "html"
+JavaScript = "js"
+CSS = "css"
+bohliao = "bohliao"

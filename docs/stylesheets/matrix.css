@@ -1,0 +1,256 @@
+:root {
+  --md-text-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --md-code-font: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 140;
+  --md-default-bg-color: #040907;
+  --md-default-bg-color--light: #08110c;
+  --md-default-bg-color--lighter: #0e1c13;
+  --md-default-bg-color--lightest: #14251a;
+  --md-default-fg-color: #e2eee5;
+  --md-default-fg-color--light: #a3b8aa;
+  --md-default-fg-color--lighter: #799482;
+  --md-default-fg-color--lightest: #23402e;
+  --md-primary-fg-color: #08110c;
+  --md-primary-fg-color--light: #102719;
+  --md-primary-fg-color--dark: #040907;
+  --md-primary-bg-color: #d4ffde;
+  --md-primary-bg-color--light: #a3b8aa;
+  --md-accent-fg-color: #a3ffb5;
+  --md-accent-fg-color--transparent: #a3ffb51a;
+  --md-accent-bg-color: #041108;
+  --md-accent-bg-color--light: #041108;
+  --md-typeset-color: #e2eee5;
+  --md-typeset-a-color: #a3ffb5;
+  --md-typeset-mark-color: #a3ffb533;
+  --md-code-fg-color: #d4ffde;
+  --md-code-bg-color: #0c1911;
+  --md-code-hl-color: #a3ffb526;
+  --md-code-hl-number-color: #e7bc8e;
+  --md-code-hl-string-color: #a3ffb5;
+  --md-code-hl-comment-color: #93ad9b;
+  --md-code-hl-keyword-color: #a8d9ff;
+  --md-code-hl-function-color: #d8c7ff;
+  --md-code-hl-constant-color: #e7bc8e;
+  --md-footer-bg-color: #08110c;
+  --md-footer-bg-color--dark: #040907;
+  --md-footer-fg-color: #e2eee5;
+  --md-footer-fg-color--light: #a3b8aa;
+  --md-footer-fg-color--lighter: #799482;
+  --matrix-green: #a3ffb5;
+  --matrix-line: #a3ffb52e;
+  --matrix-panel: #08110cee;
+  --matrix-chrome: #08110c;
+  --matrix-veil: #04090799;
+  --matrix-rain-opacity: 0.38;
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f3f8f4;
+  --md-default-fg-color: #182b1e;
+  --md-default-fg-color--light: #496450;
+  --md-default-fg-color--lighter: #587361;
+  --md-default-fg-color--lightest: #d3e1d6;
+  --md-primary-fg-color: #e8f2eb;
+  --md-primary-fg-color--light: #d9ebde;
+  --md-primary-fg-color--dark: #cee1d4;
+  --md-primary-bg-color: #183b23;
+  --md-primary-bg-color--light: #496450;
+  --md-accent-fg-color: #216637;
+  --md-accent-fg-color--transparent: #2166371a;
+  --md-accent-bg-color: #fff;
+  --md-typeset-color: #182b1e;
+  --md-typeset-a-color: #216637;
+  --md-code-fg-color: #183b23;
+  --md-code-bg-color: #e6f0e9;
+  --md-footer-bg-color: #e8f2eb;
+  --md-footer-bg-color--dark: #deebe2;
+  --md-footer-fg-color: #182b1e;
+  --md-footer-fg-color--light: #496450;
+  --md-footer-fg-color--lighter: #587361;
+  --matrix-green: #216637;
+  --matrix-line: #21663733;
+  --matrix-panel: #fafffbee;
+  --matrix-chrome: #e8f2eb;
+  --matrix-veil: #f3f8f4aa;
+  --matrix-rain-opacity: 0.18;
+}
+
+body { isolation: isolate; }
+
+#matrix-rain, .matrix-veil {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#matrix-rain { opacity: var(--matrix-rain-opacity); }
+.matrix-veil {
+  background: linear-gradient(90deg, transparent, var(--matrix-veil) 30%, var(--matrix-veil) 70%, transparent);
+}
+
+.md-header, .md-tabs {
+  background: var(--matrix-chrome);
+  color: var(--md-primary-bg-color);
+  border-bottom: 1px solid var(--matrix-line);
+}
+
+.md-header { box-shadow: 0 4px 24px #0000001a; }
+.md-header__title {
+  font-family: var(--md-code-font);
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.md-header .md-header__button.md-logo {
+  display: grid;
+  place-items: center;
+  color: var(--matrix-green);
+  border: 1px solid var(--matrix-line);
+  border-radius: 3px;
+}
+
+.md-main { background: transparent; }
+.md-main__inner { margin-top: 1.6rem; }
+.md-content {
+  min-width: 0;
+  margin-bottom: 1.6rem;
+  border: 1px solid var(--matrix-line);
+  border-radius: 8px;
+  background: var(--matrix-panel);
+  box-shadow: 0 16px 60px #00000014;
+}
+
+.md-content__inner { margin: 0 1.3rem 1.3rem; padding-top: 0; }
+.md-path { padding: 0.6rem 1.3rem 0; }
+.matrix-terminal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 1.4rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--matrix-line);
+  color: var(--md-default-fg-color--light);
+  font: 0.5rem var(--md-code-font);
+  letter-spacing: 0.06em;
+}
+
+.matrix-terminal-bar > span:nth-child(2) { min-width: 0; overflow-wrap: anywhere; }
+.matrix-lights { display: flex; flex-shrink: 0; gap: 6px; }
+.matrix-lights i { width: 6px; height: 6px; border: 1px solid var(--matrix-green); border-radius: 50%; }
+.matrix-lights i:first-child { background: var(--matrix-green); box-shadow: 0 0 8px var(--matrix-line); }
+.matrix-online { flex-shrink: 0; color: var(--matrix-green); }
+
+.md-typeset { line-height: 1.75; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { color: var(--md-default-fg-color); letter-spacing: -0.025em; }
+.md-typeset h1 { font-weight: 600; }
+.md-typeset h2 { padding-bottom: 0.35rem; border-bottom: 1px solid var(--matrix-line); }
+.md-typeset a { text-underline-offset: 0.2em; }
+.md-typeset a:hover { text-decoration: underline; }
+.md-typeset code, .md-typeset pre { border-radius: 4px; }
+.md-typeset pre > code { border: 1px solid var(--matrix-line); }
+.md-typeset blockquote { border-left-color: var(--matrix-green); color: var(--md-default-fg-color--light); }
+.md-typeset table:not([class]) { border-color: var(--matrix-line); background: var(--matrix-chrome); }
+.md-typeset .md-button { border-radius: 4px; }
+.md-typeset .md-button--primary { color: var(--md-accent-bg-color); background: var(--matrix-green); border-color: var(--matrix-green); }
+
+.md-sidebar__inner {
+  border: 1px solid var(--matrix-line);
+  border-radius: 6px;
+  background: var(--matrix-panel);
+  padding: 0.6rem 0;
+}
+
+/* align side panels with the content panel and keep gutters even */
+@media screen and (min-width: 60em) {
+  .md-sidebar {
+    padding-top: 0;
+  }
+  .md-sidebar--secondary {
+    padding-left: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    padding-right: 0.6rem;
+  }
+}
+
+/* hide the TOC panel entirely on pages without sub-headings */
+.md-sidebar--secondary .md-sidebar__inner:not(:has(.md-nav__item)) {
+  visibility: hidden;
+}
+
+.md-nav { font-family: var(--md-code-font); font-size: 0.6rem; }
+.md-nav__title { color: var(--matrix-green); background: transparent; box-shadow: none; }
+.md-nav__title::before { content: "// "; color: var(--matrix-green); }
+.md-nav__link--active { color: var(--matrix-green); }
+.md-search__form { border: 1px solid var(--matrix-line); border-radius: 5px; }
+.md-search__input::placeholder { color: var(--md-primary-bg-color--light); }
+.md-search__output { border: 1px solid var(--matrix-line); background: var(--matrix-chrome); }
+.md-search-result__meta { background: var(--matrix-chrome); color: var(--md-default-fg-color--light); }
+.md-footer, .md-footer-meta { border-top: 1px solid var(--matrix-line); }
+
+.matrix-controls { display: none; }
+.md-header__inner > .matrix-controls {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  margin-inline-start: 8px;
+}
+.matrix-rain-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--matrix-line);
+  border-radius: 50%;
+  background: var(--matrix-chrome);
+  color: var(--matrix-green);
+  font: 16px var(--md-code-font);
+  cursor: pointer;
+}
+
+.matrix-rain-toggle #rain-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.matrix-rain-toggle[hidden] { display: none; }
+.matrix-rain-toggle:hover { border-color: var(--matrix-green); }
+.matrix-rain-toggle:focus-visible { outline: 2px solid var(--matrix-green); outline-offset: 4px; }
+
+@media screen and (max-width: 76.234375em) {
+  .md-sidebar--primary, .md-nav--primary .md-nav {
+    background: var(--matrix-chrome);
+  }
+}
+
+@media screen and (max-width: 59.984375em) {
+  .md-main__inner { margin-top: 0.8rem; }
+  .md-content { margin: 0 0.6rem 1rem; }
+  .md-content__inner { margin: 0 0.9rem 1rem; }
+  .md-path { padding-inline: 0.9rem; }
+  .matrix-terminal-bar { gap: 10px; letter-spacing: 0; }
+  .matrix-online { display: none; }
+}
+
+@media print {
+  #matrix-rain, .matrix-veil, .md-header__inner > .matrix-controls, .matrix-terminal-bar { display: none; }
+  .md-content { border: 0; box-shadow: none; background: transparent; }
+}

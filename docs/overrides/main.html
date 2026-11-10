@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  {% include "announce.html" %}
+{% endblock %}
+
+{% block header %}
+  <script>
+    (() => {
+      const saved = __md_get("__palette");
+      if (saved && saved.color && saved.color.media !== "none") {
+        const scheme = saved.color.media === "(prefers-color-scheme)"
+          ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "default" : "slate")
+          : saved.color.scheme;
+        saved.index = scheme === "default" ? 1 : 0;
+        saved.color = {
+          media: "none",
+          scheme: saved.index === 1 ? "default" : "slate",
+          primary: "custom",
+          accent: "custom"
+        };
+        __md_set("__palette", saved);
+        console.info("Updated the saved color preference for the Matrix theme.");
+      }
+    })();
+  </script>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+  <div class="matrix-veil" aria-hidden="true"></div>
+  <div class="matrix-controls">
+    <button class="matrix-rain-toggle" type="button" id="rain-toggle" aria-pressed="false" hidden>
+      <span class="toggle-symbol" aria-hidden="true">||</span>
+      <span id="rain-label">Pause</span>
+    </button>
+  </div>
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+  <div class="matrix-terminal-bar" aria-hidden="true">
+    <span class="matrix-lights"><i></i><i></i><i></i></span>
+    <span>docs / {{ page.title | default(config.site_name, true) | striptags | e }}</span>
+    <span class="matrix-online">CONNECTED</span>
+  </div>
+  {{ super() }}
+{% endblock %}

@@ -1,0 +1,12 @@
+[project]
+name = "docs-blogs"
+version = "0.1.0"
+description = "Documentation and Blogging"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "zensical>=0.1.0",
+]

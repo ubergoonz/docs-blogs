@@ -1,0 +1,43 @@
+name: Documentation
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Prevent concurrent Pages deployments from racing each other
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      # build with the exact locked versions from uv.lock, not latest from PyPI
+      - run: uv sync --locked
+      - run: uv run --no-sync zensical build --clean
+      # deploy steps are skipped for pull requests (build still validates)
+      - uses: actions/configure-pages@v6
+        if: github.event_name != 'pull_request'
+      - uses: actions/upload-pages-artifact@v5
+        if: github.event_name != 'pull_request'
+        with:
+          path: site
+      - uses: actions/deploy-pages@v5
+        if: github.event_name != 'pull_request'
+        id: deployment

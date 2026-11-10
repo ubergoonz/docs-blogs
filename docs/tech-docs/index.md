@@ -1,0 +1,24 @@
+---
+status: published
+icon: material/bookshelf
+tags:
+    - docs
+hide:
+    - toc
+---
+# :material-bookshelf: Technical Documentations
+
+Welcome to the Technical Documentations section of this site.
+
+In this section you will find Technical Documentations organized based on product and technology stacks that I am actively using.
+
+The Technical Documentations are organized using **Diátaxis** (1) methodology for each topic.
+{ .annotate }
+
+1.    **What is Diátaxis?**
+
+      _A systematic approach to technical documentation authoring._
+
+      Diátaxis is a way of thinking about and doing documentation.
+
+      It prescribes approaches to content, architecture and form that emerge from a systematic approach to understanding the needs of documentation users. [read more ... :octicons-link-external-16:](https://diataxis.fr/){:target="_blank"}

@@ -1,0 +1,38 @@
+.md-status--deprecated {
+  --md-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
+  color: #56675d;
+}
+
+.md-status--draft {
+  --md-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m16 3 5 5-12 12-6 1 1-6Z M13 6l5 5'/%3E%3C/svg%3E");
+  color: #1d5c91;
+}
+
+.md-status--hot {
+  --md-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2c1 5 6 6 6 11a6 6 0 0 1-12 0c0-3 2-5 3-7 0 3 1 4 2 5 2-3 2-5 1-9Z M12 13c-1 2-3 3-3 5a3 3 0 0 0 6 0c0-2-2-3-3-5Z'/%3E%3C/svg%3E");
+  color: #9e3e08;
+}
+
+.md-status--new {
+  --md-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z'/%3E%3C/svg%3E");
+  color: var(--md-typeset-a-color);
+}
+
+.md-status--published {
+  --md-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='m7 12 3 3 7-7'/%3E%3C/svg%3E");
+  color: var(--md-typeset-a-color);
+}
+
+.md-status--deprecated::after,
+.md-status--draft::after,
+.md-status--hot::after,
+.md-status--new::after,
+.md-status--published::after {
+  background-color: currentColor;
+  -webkit-mask-image: var(--md-status-icon);
+  mask-image: var(--md-status-icon);
+}
+
+[data-md-color-scheme="slate"] .md-status--deprecated { color: #b2beb7; }
+[data-md-color-scheme="slate"] .md-status--draft { color: #86c7ff; }
+[data-md-color-scheme="slate"] .md-status--hot { color: #ffb578; }
