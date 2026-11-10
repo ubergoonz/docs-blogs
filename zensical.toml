@@ -25,7 +25,6 @@ nav = [
     { "Site Guide" = [
       { "Architecture" = "about/site-architecture.md" },
       { "Site Navigation" = "about/site-navigation.md" },
-      { "Site Roadmap" = "about/site-roadmap.md" },
       { "Page Navigation" = "about/page-navigation.md" },
       { "Formatting & Style" = "about/page-style-formatting.md" },
     ] },
@@ -40,6 +39,10 @@ nav = [
     { "Legal" = [
       { "Copyright" = "about/copyright.md" },
       { "Disclaimers" = "about/disclaimers.md" },
+    ] },
+    { "Status" = [
+      { "Site Roadmap" = "about/site-roadmap.md" },
+      { "Changelog" = "about/changelog.md" },
     ] },
   ] },
   { "Tech Docs" = [
